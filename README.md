@@ -1,4 +1,4 @@
-# Projeto :
+# Projeto :rocket:
 Aplicativo tipo CRUD para lista de participantes em um evento
 
 ## Tecnologias e ferramentas utilizadas :robot:
