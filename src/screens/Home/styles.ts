@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
       color:'#eee',
       fontSize:14,
       textAlign:'center'
+    },
+    animatedContainer:{
+      padding: 20,
+      width: '50%',
+      justifyContent: 'center',
+      alignItems:'center',
     }
   });
 

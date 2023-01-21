@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList, Alert } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, FlatList, Alert, Image } from 'react-native'
 import { Participants } from '../../components/Participants';
 import styles from './styles'
 
@@ -8,7 +8,6 @@ export function Home() {
     const [participantName, setParticipantName] = useState('');
     
     function handleParticipantAdd(){
-
       if(participants.includes(participantName)){
         return Alert.alert('Participante existe', 'Já existe um particiante na lista com esse nome')
       } 
@@ -17,8 +16,8 @@ export function Home() {
      setParticipantName('');               
     }
 
-    function handleParticipantRemove(name: string){     
-
+    function handleParticipantRemove(name: string){        
+      
       Alert.alert('Remover', `Remover o participante ${name}?`, [
         {
           text: 'Sim',
@@ -33,8 +32,12 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.eventName}>Nome do Evento</Text>
-       <Text style={styles.eventDate}>Sexta, 20 de Janeiro de 2023</Text>
+      <Text style={styles.eventName}>Nome do evento</Text>
+       <Text style={styles.eventDate}>       
+        {          
+          new Date().toISOString().slice(0, 10).split('-').reverse().join('/')
+        }
+       </Text>
        <View style={styles.form}>
        <TextInput 
        style={styles.input}
@@ -63,7 +66,7 @@ export function Home() {
     ListEmptyComponent={()=>(
       <Text style={styles.listEmptyText}>
         Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
-      </Text>
+      </Text>      
     )}
     />
     </View>

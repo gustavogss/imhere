@@ -1,5 +1,5 @@
 # Projeto :rocket:
-Aplicativo tipo CRUD para lista de participantes em um evento
+Aplicativo para cadastrar e remover participantes de um evento
 
 ## Tecnologias e ferramentas utilizadas :robot:
 - [VsCode](https://code.visualstudio.com/docs)
